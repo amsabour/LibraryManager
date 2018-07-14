@@ -1,6 +1,17 @@
+from django.http import Http404
 from django.shortcuts import render
-from django.http import HttpResponse
+from .models import Book
 
 
 def index(request):
-    return HttpResponse("<h1> This is the books homepage</h1>")
+    all_books = Book.objects.all()
+    context = {'all_books': all_books}
+    return render(request, 'Books/index.html', context)
+
+
+def detail(request, book_id):
+    try:
+        book = Book.objects.get(id=book_id)
+    except Book.DoesNotExist:
+        raise Http404("We're sorry, book does not exist")
+    return render(request, 'Books/detail.html', {'book': book})
