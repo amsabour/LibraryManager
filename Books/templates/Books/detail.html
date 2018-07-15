@@ -6,23 +6,71 @@
 
 
 
+{#{% block body %}#}
+{#    <img src="{{ book.image_url }}" width="200" height="300">#}
+{#    <h2>{{ book.title }}</h2>#}
+{#    <h3>{{ book.author }}</h3>#}
+{#    {% if book.is_taken %}#}
+{#        <h5> This book is taken</h5>#}
+{#    {% else %}#}
+{#        <h5> This book is not taken</h5>#}
+{#    {% endif %}#}
+{#    {% if error_message %}#}
+{#        <p><strong> {{ error_message }}</strong></p>#}
+{#    {% endif %}#}
+{#{% endblock %}#}
+
+
+
 {% block body %}
-    <img src="{{ book.image_url }}" width="200" height="300">
-    <h2>{{ book.title }}</h2>
-    <h3>{{ book.author }}</h3>
-    {% if book.is_taken %}
-        <h5> This book is taken</h5>
-    {% else %}
-        <h5> This book is not taken</h5>
-    {% endif %}
-    {% if error_message %}
-        <p><strong> {{ error_message }}</strong></p>
-    {% endif %}
+    <div class="container-fluid songs-container">
+
+        <div class="row">
+
+            <!-- Left Album Info -->
+            <div class="col-sm-4 col-md-3">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+                        <a href="{% url 'Books:detail' book.id %}">
+                            {% if book.image_url %}
+                                <img src="{{ book.image_url }}" class="img-responsive">
+                            {% else %}
+                                <h3>No image to display</h3>
+                            {% endif %}
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Song Info -->
+            <div class="col-sm-8 col-md-9">
+                <div class="panel panel-default">
+                    <div class="panel-body">
+
+                        <h2>{{ book.title }}</h2>
+                        <h4>{{ book.author }}</h4> <br>
+                        {% if error_message %}
+                            <p><strong>{{ error_message }}</strong></p>
+                        {% endif %}
+
+                        <p> This book is {% if book.is_taken %}
+                            <span class="text-danger"> <strong>already taken.</strong> </span> {% else %}
+                            <span class="text-success"> <strong>available.</strong></span> {% endif %}</p>
+
+
+                        <a href="#" class="btn btn-success">Borrow</a>
+
+
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
 {% endblock %}
-
-
-
-
 
 
 

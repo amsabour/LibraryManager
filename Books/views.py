@@ -1,18 +1,6 @@
-# from django.shortcuts import render, get_object_or_404
-# from .models import Book
-#
-#
-# def index(request):
-#     all_books = Book.objects.all()
-#     context = {'all_books': all_books}
-#     return render(request, 'Books/index.html', context)
-#
-#
-# def detail(request, book_id):
-#     book = get_object_or_404(Book, id=book_id)
-#     return render(request, 'Books/detail.html', {'book': book})
-
 from django.views import generic
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from django.urls import reverse_lazy
 from .models import Book
 
 
@@ -29,3 +17,16 @@ class DetailView(generic.DetailView):
     template_name = 'Books/detail.html'
 
 
+class BookCreate(CreateView):
+    model = Book
+    fields = ['title', 'author', 'image_url', 'is_taken']
+
+
+class BookUpdate(UpdateView):
+    model = Book
+    fields = ['title', 'author', 'image_url', 'is_taken']
+
+
+class BookDelete(DeleteView):
+    model = Book
+    success_url = reverse_lazy('Books:index')
