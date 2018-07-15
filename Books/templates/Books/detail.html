@@ -1,2 +1,31 @@
+{% extends 'Books/base.html' %}
 
-{{ book }}
+{% block title %}
+    Book details
+{% endblock %}
+
+
+
+{% block body %}
+    <img src="{{ book.image_url }}" width="200" height="300">
+    <h2>{{ book.title }}</h2>
+    <h3>{{ book.author }}</h3>
+    {% if book.is_taken %}
+        <h5> This book is taken</h5>
+    {% else %}
+        <h5> This book is not taken</h5>
+    {% endif %}
+    {% if error_message %}
+        <p><strong> {{ error_message }}</strong></p>
+    {% endif %}
+{% endblock %}
+
+
+
+
+
+
+
+
+
+

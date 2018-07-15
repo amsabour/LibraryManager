@@ -1,11 +1,13 @@
 from django.conf.urls import url
 from . import views
 
+app_name = 'Books'
+
 urlpatterns = [
     # /books/
-    url(r'^$', views.index, name='index'),
+    url(r'^$', views.IndexView.as_view(), name='index'),
 
-    # /books/71
-    url(r'^(?P<book_id>[0-9]+)/$', views.detail, name='detail'),
+    # /books/<book_id>/
+    url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
 
 ]

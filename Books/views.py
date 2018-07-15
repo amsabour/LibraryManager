@@ -1,17 +1,31 @@
-from django.http import Http404
-from django.shortcuts import render
+# from django.shortcuts import render, get_object_or_404
+# from .models import Book
+#
+#
+# def index(request):
+#     all_books = Book.objects.all()
+#     context = {'all_books': all_books}
+#     return render(request, 'Books/index.html', context)
+#
+#
+# def detail(request, book_id):
+#     book = get_object_or_404(Book, id=book_id)
+#     return render(request, 'Books/detail.html', {'book': book})
+
+from django.views import generic
 from .models import Book
 
 
-def index(request):
-    all_books = Book.objects.all()
-    context = {'all_books': all_books}
-    return render(request, 'Books/index.html', context)
+class IndexView(generic.ListView):
+    template_name = 'Books/index.html'
+    context_object_name = 'all_books'
+
+    def get_queryset(self):
+        return Book.objects.all()
 
 
-def detail(request, book_id):
-    try:
-        book = Book.objects.get(id=book_id)
-    except Book.DoesNotExist:
-        raise Http404("We're sorry, book does not exist")
-    return render(request, 'Books/detail.html', {'book': book})
+class DetailView(generic.DetailView):
+    model = Book
+    template_name = 'Books/detail.html'
+
+
