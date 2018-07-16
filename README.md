@@ -10,8 +10,8 @@ The normal user user name and passwords are:\
 username: username \
 password: password
 
-Only the admin can add and remove and edit the books.\
-Normal users can sign up and when logged in can borrow or return books.
+Only the admin can add, remove and edit the books.\
+Normal users can sign up and login and when logged in can borrow or return books.
 
 
 I hope you enjoy. 
