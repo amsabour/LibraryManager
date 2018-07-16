@@ -32,8 +32,8 @@
                 <div class="panel panel-default">
                     <div class="panel-body">
                         <a href="{% url 'Books:detail' book.id %}">
-                            {% if book.image_url %}
-                                <img src="{{ book.image_url }}" class="img-responsive">
+                            {% if book.book_logo %}
+                                <img src="{{ book.book_logo.url }}" class="img-responsive">
                             {% else %}
                                 <h3>No image to display</h3>
                             {% endif %}
