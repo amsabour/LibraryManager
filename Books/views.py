@@ -43,8 +43,12 @@ def register(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                books = Book.objects.all()
-                return render(request, 'Books/index.html', {'all_books': books, 'user': user})
+                my_books = Book.objects.filter(taken_by=user.username)
+                available_books = Book.objects.filter(taken_by='')
+                not_available_books = Book.objects.filter(~Q(taken_by=user.username), ~Q(taken_by=''))
+                return render(request, 'Books/index.html',
+                              {'my_books': my_books, 'user': user, 'available_books': available_books,
+                               'not_available_books': not_available_books})
 
     return render(request, 'Books/registration_form.html', {'form': form})
 

@@ -3,10 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0113401c-30de-4331-aa51-940643e7ac9e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Books/templates/Books/base.html" afterPath="$PROJECT_DIR$/Books/templates/Books/base.html" />
-      <change beforePath="$PROJECT_DIR$/Books/templates/Books/book-list.html" afterPath="$PROJECT_DIR$/Books/templates/Books/book-list.html" />
-      <change beforePath="$PROJECT_DIR$/Books/templates/Books/index.html" afterPath="$PROJECT_DIR$/Books/templates/Books/index.html" />
-      <change beforePath="$PROJECT_DIR$/Books/urls.py" afterPath="$PROJECT_DIR$/Books/urls.py" />
       <change beforePath="$PROJECT_DIR$/Books/views.py" afterPath="$PROJECT_DIR$/Books/views.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,8 +63,8 @@
       <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Books/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="700">
-              <caret line="154" column="40" lean-forward="false" selection-start-line="154" selection-start-column="40" selection-end-line="154" selection-end-column="40" />
+            <state relative-caret-position="687">
+              <caret line="50" column="75" lean-forward="false" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
@@ -99,11 +95,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>ADd bo</find>
-      <find>user.is</find>
-      <find>index.html</find>
-      <find>request.</find>
-      <find>index.ht</find>
       <find>base.html</find>
       <find>BookCre</find>
       <find>Books:book</find>
@@ -129,6 +120,11 @@
       <find>form-te</find>
       <find>form-templ</find>
       <find>avaial`</find>
+      <find>redire</find>
+      <find>redirect('Books:index</find>
+      <find>register</find>
+      <find>login</find>
+      <find>regi</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -168,7 +164,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="146" />
     <option name="y" value="79" />
     <option name="width" value="1420" />
@@ -248,7 +244,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="termina&#9;ACTION&#9;ActivateTerminalToolWindow&#10;update&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/update_book.html&#10;terminal&#9;ACTION&#9;ActivateTerminalToolWindow&#10;termi&#9;ACTION&#9;ActivateTerminalToolWindow&#10;model&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/models.py&#10;sta&#9;ACTION&#9;ActivateStatisticToolWindow&#10;detail&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/detail.html&#10;base&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/base.html&#10;Books&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books&#10;Book&#9;null&#9;null&#10;statis&#9;ACTION&#9;ActivateStatisticToolWindow&#10;plugin&#9;ACTION&#9;WelcomeScreen.Plugins&#10;index&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/index.html&#10;termin&#9;ACTION&#9;ActivateTerminalToolWindow&#10;plugins&#9;ACTION&#9;WelcomeScreen.Plugins&#10;deta&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/detail.html&#10;Plugins&#9;ACTION&#9;WelcomeScreen.Plugins" />
+    <property name="SearchEverywhereHistoryKey" value="termi&#9;ACTION&#9;ActivateTerminalToolWindow&#10;termina&#9;ACTION&#9;ActivateTerminalToolWindow&#10;update&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/update_book.html&#10;terminal&#9;ACTION&#9;ActivateTerminalToolWindow&#10;model&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/models.py&#10;sta&#9;ACTION&#9;ActivateStatisticToolWindow&#10;detail&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/detail.html&#10;base&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/base.html&#10;Books&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books&#10;Book&#9;null&#9;null&#10;statis&#9;ACTION&#9;ActivateStatisticToolWindow&#10;plugin&#9;ACTION&#9;WelcomeScreen.Plugins&#10;index&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/index.html&#10;termin&#9;ACTION&#9;ActivateTerminalToolWindow&#10;plugins&#9;ACTION&#9;WelcomeScreen.Plugins&#10;deta&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/detail.html&#10;Plugins&#9;ACTION&#9;WelcomeScreen.Plugins" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
@@ -339,7 +335,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-9" y="-9" width="1938" height="1048" extended-state="7" />
+    <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -773,8 +769,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Books/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="700">
-          <caret line="154" column="40" lean-forward="false" selection-start-line="154" selection-start-column="40" selection-end-line="154" selection-end-column="40" />
+        <state relative-caret-position="687">
+          <caret line="50" column="75" lean-forward="false" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
