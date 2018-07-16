@@ -5,6 +5,7 @@ from django.urls import reverse_lazy
 from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, JsonResponse
+from django.db.models import Q
 from .forms import *
 from .models import Book
 
@@ -14,8 +15,10 @@ def index(request):
         return redirect('Books:login_user')
     my_books = Book.objects.filter(taken_by=request.user.username)
     available_books = Book.objects.filter(taken_by='')
+    not_available_books = Book.objects.filter(~Q(taken_by=request.user.username), ~Q(taken_by=''))
     return render(request, 'Books/index.html',
-                  {'my_books': my_books, 'user': request.user, 'available_books': available_books})
+                  {'my_books': my_books, 'user': request.user, 'available_books': available_books,
+                   'not_available_books': not_available_books})
 
 
 def detail(request, book_id):
@@ -61,8 +64,10 @@ def login_user(request):
                 login(request, user)
                 my_books = Book.objects.filter(taken_by=user.username)
                 available_books = Book.objects.filter(taken_by='')
+                not_available_books = Book.objects.filter(~Q(taken_by=user.username), ~Q(taken_by=''))
                 return render(request, 'Books/index.html',
-                              {'my_books': my_books, 'user': user, 'available_books': available_books})
+                              {'my_books': my_books, 'user': user, 'available_books': available_books,
+                               'not_available_books': not_available_books})
             else:
                 return render(request, 'Books/login_form.html', {'error_message': 'Your account has been disabled'})
     return render(request, 'Books/login_form.html')
