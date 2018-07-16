@@ -30,4 +30,10 @@ urlpatterns = [
     # /books/delete/2
     url(r'^delete/(?P<pk>[0-9]+)/$', views.BookDelete.as_view(), name='book-delete'),
 
+    # /books/2/return/
+    url(r'^(?P<book_id>[0-9]+)/return/$', views.return_book, name='book-return'),
+
+    # /books/2/borrow/
+    url(r'^(?P<book_id>[0-9]+)/borrow/$', views.borrow_book, name='book-borrow'),
+
 ]

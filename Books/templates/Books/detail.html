@@ -46,10 +46,10 @@
 
                         {% if book.taken_by %}
                             {% if book.taken_by == user.username %}
-                                <a href="#" class="btn btn-danger"> Return Book </a>
+                                <a href="{% url 'Books:book-return' book.id %}" class="btn btn-danger"> Return Book </a>
                             {% endif %}
                         {% else %}
-                            <a href="#" class="btn btn-success">Borrow</a>
+                            <a href="{% url 'Books:book-borrow' book.id %}" class="btn btn-success">Borrow</a>
                         {% endif %}
                     </div>
                 </div>

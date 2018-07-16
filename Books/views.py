@@ -59,8 +59,10 @@ def login_user(request):
         if user is not None:
             if user.is_active:
                 login(request, user)
-                books = Book.objects.all()
-                return render(request, 'Books/index.html', {'all_books': books, 'user': user})
+                my_books = Book.objects.filter(taken_by=user.username)
+                available_books = Book.objects.filter(taken_by='')
+                return render(request, 'Books/index.html',
+                              {'my_books': my_books, 'user': user, 'available_books': available_books})
             else:
                 return render(request, 'Books/login_form.html', {'error_message': 'Your account has been disabled'})
     return render(request, 'Books/login_form.html')
@@ -107,3 +109,23 @@ def update_book(request, book_id):
 class BookDelete(DeleteView):
     success_url = reverse_lazy('Books:index')
     model = Book
+
+
+def return_book(request, book_id):
+    if not request.user.is_authenticated:
+        return redirect('Books:login_user')
+    else:
+        book = get_object_or_404(Book, pk=book_id)
+        book.taken_by = ''
+        book.save()
+        return redirect('Books:detail', book_id)
+
+
+def borrow_book(request, book_id):
+    if not request.user.is_authenticated:
+        return redirect('Books:login_user')
+    else:
+        book = get_object_or_404(Book, pk=book_id)
+        book.taken_by = request.user.username
+        book.save()
+        return redirect('Books:detail', book_id)
