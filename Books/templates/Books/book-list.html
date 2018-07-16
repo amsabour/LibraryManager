@@ -1,5 +1,5 @@
 {% for book in list %}
-    <div class="col-sm-3 col-lg-2">
+    <div class="col-sm-4 col-md-2 ">
         <div class="thumbnail">
             <a href="{% url 'Books:detail' book.id %}">
                 <img src="{{ book.book_logo.url }}" class="img-responsive">
@@ -35,5 +35,26 @@
         </div>
     </div>
     {% cycle '' '' '' '' '' '<div class="clearfix visible-lg"></div>' %}
+
+    <script>
+        $(document).ready(function () {
+            $(window).on('resize', function () {
+                var winWidth = $(window).width();
+                if (winWidth < 768) {
+                    console.log('Window Width: ' + winWidth + 'class used: col-xs');
+                    return 1
+                } else if (winWidth <= 991) {
+                    console.log('Window Width: ' + winWidth + 'class used: col-sm');
+                    return 2
+                } else if (winWidth <= 1199) {
+                    console.log('Window Width: ' + winWidth + 'class used: col-md');
+                    return 3
+                } else {
+                    console.log('Window Width: ' + winWidth + 'class used: col-lg');
+                    return 4
+                }
+            });
+        });
+    </script>
 
 {% endfor %}

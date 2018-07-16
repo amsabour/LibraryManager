@@ -3,7 +3,32 @@
   <component name="ChangeListManager">
     <list default="true" id="0113401c-30de-4331-aa51-940643e7ac9e" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/Books/views.py" afterPath="$PROJECT_DIR$/Books/views.py" />
+      <change beforePath="$PROJECT_DIR$/Books/templates/Books/book-list.html" afterPath="$PROJECT_DIR$/Books/templates/Books/book-list.html" />
+      <change beforePath="$PROJECT_DIR$/media/2081.jpg" afterPath="$PROJECT_DIR$/media/2081.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/220px-A_Song_of_Ice_and_Fire_book_collection_box_set_cover.jpg" afterPath="$PROJECT_DIR$/media/220px-A_Song_of_Ice_and_Fire_book_collection_box_set_cover.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/220px-EastOfEden.jpg" afterPath="$PROJECT_DIR$/media/220px-EastOfEden.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/41WIbflfG2L._SX323_BO1204203200_.jpg" afterPath="$PROJECT_DIR$/media/41WIbflfG2L._SX323_BO1204203200_.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/41rrZplMctL._SX321_BO1204203200_.jpg" afterPath="$PROJECT_DIR$/media/41rrZplMctL._SX321_BO1204203200_.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/516c6gUQLaL._SX329_BO1204203200_.jpg" afterPath="$PROJECT_DIR$/media/516c6gUQLaL._SX329_BO1204203200_.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/517FwF49vL._SX322_BO1204203200_.jpg" afterPath="$PROJECT_DIR$/media/517FwF49vL._SX322_BO1204203200_.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/517O7QWZw7L._SX330_BO1204203200_.jpg" afterPath="$PROJECT_DIR$/media/517O7QWZw7L._SX330_BO1204203200_.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/519qyNi1HsL._SX331_BO1204203200_.jpg" afterPath="$PROJECT_DIR$/media/519qyNi1HsL._SX331_BO1204203200_.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/51ItBwnbJ6L._SX322_BO1204203200_.jpg" afterPath="$PROJECT_DIR$/media/51ItBwnbJ6L._SX322_BO1204203200_.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/51KJdpN-J7L._SX333_BO1204203200_.jpg" afterPath="$PROJECT_DIR$/media/51KJdpN-J7L._SX333_BO1204203200_.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/51fD78uSTuL._SX348_BO1204203200_.jpg" afterPath="$PROJECT_DIR$/media/51fD78uSTuL._SX348_BO1204203200_.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/51mV1XUUQL._AC_UL200_SR200200_.jpg" afterPath="$PROJECT_DIR$/media/51mV1XUUQL._AC_UL200_SR200200_.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/51toTzgHGXL._SX324_BO1204203200_.jpg" afterPath="$PROJECT_DIR$/media/51toTzgHGXL._SX324_BO1204203200_.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/91xsHPbe7pL._AC_UL200_SR200200_.jpg" afterPath="$PROJECT_DIR$/media/91xsHPbe7pL._AC_UL200_SR200200_.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/AStormOfSwords.jpg" afterPath="$PROJECT_DIR$/media/AStormOfSwords.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/The_Amber_Spyglass_Book_Cover.jpg" afterPath="$PROJECT_DIR$/media/The_Amber_Spyglass_Book_Cover.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/django.jpg" afterPath="$PROJECT_DIR$/media/django.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/django2.png" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/media/kKssPOdB.jpg" afterPath="$PROJECT_DIR$/media/kKssPOdB.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/particleAtlas.jpg" afterPath="$PROJECT_DIR$/media/particleAtlas.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/spark_1.png" afterPath="$PROJECT_DIR$/media/spark_1.png" />
+      <change beforePath="$PROJECT_DIR$/media/spark_17.png" afterPath="$PROJECT_DIR$/media/spark_17.png" />
+      <change beforePath="$PROJECT_DIR$/media/waterDUDV.jpg" afterPath="$PROJECT_DIR$/media/waterDUDV.jpg" />
+      <change beforePath="$PROJECT_DIR$/media/whateverybodyissaying.jpg" afterPath="$PROJECT_DIR$/media/whateverybodyissaying.jpg" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -50,24 +75,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="book-list.html" pinned="false" current-in-tab="false">
+      <file leaf-file-name="book-list.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Books/templates/Books/book-list.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="21">
-              <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
+            <state relative-caret-position="357">
+              <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="views.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="detail.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Books/templates/Books/detail.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="805">
+              <caret line="51" column="71" lean-forward="false" selection-start-line="51" selection-start-column="71" selection-end-line="51" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="views.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Books/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="687">
-              <caret line="50" column="75" lean-forward="false" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
+            <state relative-caret-position="456">
+              <caret line="101" column="22" lean-forward="false" selection-start-line="101" selection-start-column="22" selection-end-line="101" selection-end-column="22" />
               <folding>
                 <element signature="e#0#32#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="forms.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Books/forms.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="378">
+              <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -95,9 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>base.html</find>
-      <find>BookCre</find>
-      <find>Books:book</find>
       <find>form-template</find>
       <find>Submit</find>
       <find>==</find>
@@ -125,6 +167,9 @@
       <find>register</find>
       <find>login</find>
       <find>regi</find>
+      <find>update</find>
+      <find>img-re</find>
+      <find>img-fl</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -149,12 +194,12 @@
         <option value="$PROJECT_DIR$/Books/templates/Books/update_book.html" />
         <option value="$PROJECT_DIR$/Books/forms.py" />
         <option value="$PROJECT_DIR$/Books/models.py" />
-        <option value="$PROJECT_DIR$/Books/templates/Books/detail.html" />
-        <option value="$PROJECT_DIR$/Books/templates/Books/book-list.html" />
         <option value="$PROJECT_DIR$/Books/templates/Books/index.html" />
         <option value="$PROJECT_DIR$/Books/templates/Books/base.html" />
         <option value="$PROJECT_DIR$/Books/urls.py" />
         <option value="$PROJECT_DIR$/Books/views.py" />
+        <option value="$PROJECT_DIR$/Books/templates/Books/detail.html" />
+        <option value="$PROJECT_DIR$/Books/templates/Books/book-list.html" />
       </list>
     </option>
   </component>
@@ -244,7 +289,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="SearchEverywhereHistoryKey" value="termi&#9;ACTION&#9;ActivateTerminalToolWindow&#10;termina&#9;ACTION&#9;ActivateTerminalToolWindow&#10;update&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/update_book.html&#10;terminal&#9;ACTION&#9;ActivateTerminalToolWindow&#10;model&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/models.py&#10;sta&#9;ACTION&#9;ActivateStatisticToolWindow&#10;detail&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/detail.html&#10;base&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/base.html&#10;Books&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books&#10;Book&#9;null&#9;null&#10;statis&#9;ACTION&#9;ActivateStatisticToolWindow&#10;plugin&#9;ACTION&#9;WelcomeScreen.Plugins&#10;index&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/index.html&#10;termin&#9;ACTION&#9;ActivateTerminalToolWindow&#10;plugins&#9;ACTION&#9;WelcomeScreen.Plugins&#10;deta&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/detail.html&#10;Plugins&#9;ACTION&#9;WelcomeScreen.Plugins" />
+    <property name="SearchEverywhereHistoryKey" value="termina&#9;ACTION&#9;ActivateTerminalToolWindow&#10;termi&#9;ACTION&#9;ActivateTerminalToolWindow&#10;update&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/update_book.html&#10;terminal&#9;ACTION&#9;ActivateTerminalToolWindow&#10;model&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/models.py&#10;sta&#9;ACTION&#9;ActivateStatisticToolWindow&#10;detail&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/detail.html&#10;base&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/base.html&#10;Books&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books&#10;Book&#9;null&#9;null&#10;statis&#9;ACTION&#9;ActivateStatisticToolWindow&#10;plugin&#9;ACTION&#9;WelcomeScreen.Plugins&#10;index&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/index.html&#10;termin&#9;ACTION&#9;ActivateTerminalToolWindow&#10;plugins&#9;ACTION&#9;WelcomeScreen.Plugins&#10;deta&#9;FILE&#9;file://C:/Users/Asus/PycharmProjects/LibraryManager/Books/templates/Books/detail.html&#10;Plugins&#9;ACTION&#9;WelcomeScreen.Plugins" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
@@ -336,7 +381,6 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="DB Browser" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -346,7 +390,7 @@
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2839779" sideWeight="0.49791667" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.320442" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.17083333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Statistic" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32928178" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -654,16 +698,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Books/forms.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="8" column="45" lean-forward="false" selection-start-line="8" selection-start-column="45" selection-end-line="8" selection-end-column="45" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Books/templates/Books/update_book.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="546">
@@ -703,14 +737,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Books/templates/Books/detail.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="567">
-          <caret line="51" column="71" lean-forward="false" selection-start-line="51" selection-start-column="71" selection-end-line="51" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Books/templates/Books/create_book.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
@@ -731,14 +757,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Books/templates/Books/book-list.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="21">
-          <caret line="1" column="22" lean-forward="false" selection-start-line="1" selection-start-column="22" selection-end-line="1" selection-end-column="22" />
           <folding />
         </state>
       </provider>
@@ -769,11 +787,35 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Books/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="50" column="75" lean-forward="false" selection-start-line="50" selection-start-column="75" selection-end-line="50" selection-end-column="75" />
+        <state relative-caret-position="456">
+          <caret line="101" column="22" lean-forward="false" selection-start-line="101" selection-start-column="22" selection-end-line="101" selection-end-column="22" />
           <folding>
             <element signature="e#0#32#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Books/forms.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="21" column="0" lean-forward="false" selection-start-line="21" selection-start-column="0" selection-end-line="21" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Books/templates/Books/detail.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="805">
+          <caret line="51" column="71" lean-forward="false" selection-start-line="51" selection-start-column="71" selection-end-line="51" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Books/templates/Books/book-list.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="357">
+          <caret line="17" column="36" lean-forward="true" selection-start-line="17" selection-start-column="36" selection-end-line="17" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
