@@ -2,102 +2,105 @@ from django.views import generic
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
 from django.views.generic import View
 from django.urls import reverse_lazy
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse, JsonResponse
 from .forms import *
 from .models import Book
 
 
-def log_out(request):
+def index(request):
+    if not request.user.is_authenticated:
+        return redirect('Books:login_user')
+    books = Book.objects.all()
+    return render(request, 'Books/index.html', {'all_books': books, 'user': request.user})
+
+
+def detail(request, book_id):
+    if not request.user.is_authenticated:
+        return render(request, 'Books/login_form.html')
+    else:
+        user = request.user
+        book = get_object_or_404(Book, pk=book_id)
+        return render(request, 'Books/detail.html', {'book': book, 'user': user})
+
+
+def register(request):
+    form = UserForm(request.POST or None)
+
+    if form.is_valid():
+        user = form.save(commit=False)
+        username = form.cleaned_data['username']
+        password = form.cleaned_data['password']
+        user.set_password(password)
+        user.save()
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                books = Book.objects.all()
+                return render(request, 'Books/index.html', {'all_books': books, 'user': user})
+
+    return render(request, 'Books/registration_form.html', {'form': form})
+
+
+def logout_user(request):
     logout(request)
-    return redirect('Books:index')
+    return redirect('Books:login_user')
 
 
-class IndexView(generic.ListView):
-    template_name = 'Books/index.html'
-    context_object_name = 'all_books'
-
-    def get_queryset(self):
-        return Book.objects.all()
-
-
-class DetailView(generic.DetailView):
-    model = Book
-    template_name = 'Books/detail.html'
-
-
-class BookCreate(CreateView):
-    model = Book
-    fields = ['title', 'author', 'book_logo', 'is_taken']
+def login_user(request):
+    if request.method == "POST":
+        username = request.POST['username']
+        password = request.POST['password']
+        user = authenticate(username=username, password=password)
+        if user is not None:
+            if user.is_active:
+                login(request, user)
+                books = Book.objects.all()
+                return render(request, 'Books/index.html', {'all_books': books, 'user': user})
+            else:
+                return render(request, 'Books/login_form.html', {'error_message': 'Your account has been disabled'})
+    return render(request, 'Books/login_form.html')
 
 
-class BookUpdate(UpdateView):
-    model = Book
-    fields = ['title', 'author', 'book_logo', 'is_taken']
+def add_book(request):
+    if not request.user.is_authenticated:
+        return redirect('Books:login_user')
+    else:
+        form = BookForm(request.POST or None, request.FILES or None)
+        if form.is_valid():
+            book = form.save(commit=False)
+            book.book_logo = request.FILES['book_logo']
+            book.save()
+            return redirect('Books:detail', book.id)
+        else:
+            return render(request, 'Books/create_book.html', {'form': form})
+
+
+def update_book(request, book_id):
+    if not request.user.is_authenticated:
+        return redirect('Books:login_user')
+    else:
+        book = get_object_or_404(Book, pk=book_id)
+
+        if request.method == "POST":
+            form = BookForm(request.POST or None, request.FILES or None)
+            if form.is_valid():
+                book.title = form.cleaned_data['title']
+                book.author = form.cleaned_data['author']
+                book.book_logo = form.cleaned_data['book_logo']
+                book.is_taken = form.cleaned_data['is_taken']
+                book.save()
+                return redirect('Books:detail', book.id)
+        else:
+            data = {'title': book.title, 'author': book.author, 'book_logo': book.book_logo, 'is_taken': book.is_taken}
+            form = BookForm(initial=data)
+
+        context = {'form': form}
+        return render(request, 'Books/update_book.html', context)
 
 
 class BookDelete(DeleteView):
     success_url = reverse_lazy('Books:index')
     model = Book
-
-
-class UserFormView(View):
-    form_class = UserForm
-    template_name = 'Books/registration_form.html'
-
-    # display blank form
-    def get(self, request):
-        form = self.form_class(None)
-        return render(request, self.template_name, {'form': form})
-
-    # process registration data
-    def post(self, request):
-        form = self.form_class(request.POST)
-
-        if form.is_valid():
-            user = form.save(commit=False)
-
-            # cleaned data
-            username = form.cleaned_data['username']
-            password = form.cleaned_data['password']
-            user.set_password(password)
-            user.save()
-
-            # returns User objects if data is correct
-            user = authenticate(username=username, password=password)
-
-            if user is not None:
-                if user.is_active:
-                    login(request, user)
-                    return redirect('Books:index')
-
-        return render(request, self.template_name, {'form': form})
-
-
-class UserLoginView(View):
-    form_class = LoginForm
-    template_name = 'Books/login_form.html'
-
-    # display blank form
-    def get(self, request):
-        form = self.form_class(None)
-        return render(request, self.template_name, {'form': form})
-
-    def post(self, request):
-        form = self.form_class(request.POST)
-
-        if form.is_valid():
-            # cleaned data
-            print(form.cleaned_data['username'])
-            print(form.cleaned_data['password'])
-
-            user = authenticate(username=form.cleaned_data['username'], password=form.cleaned_data['password'])
-
-            if user is not None:
-                if user.is_active:
-                    login(request, user)
-                    print('login successful')
-                    return redirect('Books:index')
-
-        return render(request, self.template_name, {'form': form})

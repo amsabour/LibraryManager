@@ -7,27 +7,27 @@ app_name = 'Books'
 
 urlpatterns = [
     # /books/
-    url(r'^$', views.IndexView.as_view(), name='index'),
+    url(r'^$', views.index, name='index'),
 
     # /books/register/
-    url(r'^register/$', views.UserFormView.as_view(), name='register'),
-
-    # /books/login/
-    url(r'^login/$', views.UserLoginView.as_view(), name='login'),
-
-    # /books/logout/
-    url(r'^logout/$', views.log_out, name='logout'),
+    url(r'^register/$', views.register, name='register'),
 
     # /books/<book_id>/
-    url(r'^(?P<pk>[0-9]+)/$', views.DetailView.as_view(), name='detail'),
+    url(r'^(?P<book_id>[0-9]+)/$', views.detail, name='detail'),
+
+    # /books/logout_user/
+    url(r'^logout_user/$', views.logout_user, name='logout_user'),
+
+    # /books/login_user/
+    url(r'^login_user/$', views.login_user, name='login_user'),
 
     # /books/add
-    url(r'^add/$', views.BookCreate.as_view(), name='book-add'),
+    url(r'^add/$', views.add_book, name='add_book'),
 
-    # /books/2/update/
-    url(r'^(?P<pk>[0-9]+)/update/$', views.BookUpdate.as_view(), name='book-update'),
+    # /books/update/2/
+    url(r'^update/(?P<book_id>[0-9]+)/$', views.update_book, name='book-update'),
 
-    # /books/2/delete
-    url(r'^(?P<pk>[0-9]+)/delete/$', views.BookDelete.as_view(), name='book-delete'),
+    # /books/delete/2
+    url(r'^delete/(?P<pk>[0-9]+)/$', views.BookDelete.as_view(), name='book-delete'),
 
 ]
