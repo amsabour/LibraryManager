@@ -134,3 +134,25 @@ def borrow_book(request, book_id):
         book.taken_by = request.user.username
         book.save()
         return redirect('Books:detail', book_id)
+
+
+def search(request):
+    if not request.user.is_authenticated:
+        return redirect('Books:login_user')
+    else:
+        query = request.GET.get("q")
+        if query:
+            books = Book.objects.all().filter(
+                Q(title__icontains=query) |
+                Q(author__icontains=query)
+            ).distinct()
+
+            my_books = books.filter(taken_by=request.user.username)
+            available_books = books.filter(taken_by='')
+            not_available_books = books.filter(~Q(taken_by=request.user.username), ~Q(taken_by=''))
+
+            return render(request, 'Books/index.html',
+                          {'my_books': my_books, 'user': request.user, 'available_books': available_books,
+                           'not_available_books': not_available_books})
+        else:
+            return redirect('Books:index')

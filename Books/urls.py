@@ -36,4 +36,7 @@ urlpatterns = [
     # /books/2/borrow/
     url(r'^(?P<book_id>[0-9]+)/borrow/$', views.borrow_book, name='book-borrow'),
 
+    # /books/search/ (text goes here) /
+    url(r'^search/$', views.search, name='search'),
+
 ]
