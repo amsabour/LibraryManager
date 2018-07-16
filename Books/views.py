@@ -12,8 +12,10 @@ from .models import Book
 def index(request):
     if not request.user.is_authenticated:
         return redirect('Books:login_user')
-    books = Book.objects.all()
-    return render(request, 'Books/index.html', {'all_books': books, 'user': request.user})
+    my_books = Book.objects.filter(taken_by=request.user.username)
+    available_books = Book.objects.filter(taken_by='')
+    return render(request, 'Books/index.html',
+                  {'my_books': my_books, 'user': request.user, 'available_books': available_books})
 
 
 def detail(request, book_id):
@@ -69,6 +71,7 @@ def add_book(request):
         return redirect('Books:login_user')
     else:
         form = BookForm(request.POST or None, request.FILES or None)
+        form.fields.pop('taken_by')
         if form.is_valid():
             book = form.save(commit=False)
             book.book_logo = request.FILES['book_logo']
@@ -90,11 +93,11 @@ def update_book(request, book_id):
                 book.title = form.cleaned_data['title']
                 book.author = form.cleaned_data['author']
                 book.book_logo = form.cleaned_data['book_logo']
-                book.is_taken = form.cleaned_data['is_taken']
+                book.taken_by = form.cleaned_data["taken_by"]
                 book.save()
                 return redirect('Books:detail', book.id)
         else:
-            data = {'title': book.title, 'author': book.author, 'book_logo': book.book_logo, 'is_taken': book.is_taken}
+            data = {'title': book.title, 'author': book.author, 'book_logo': book.book_logo, 'taken_by': book.taken_by}
             form = BookForm(initial=data)
 
         context = {'form': form}

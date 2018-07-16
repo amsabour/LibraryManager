@@ -5,23 +5,6 @@
 {% endblock %}
 
 
-
-{#{% block body %}#}
-{#    <img src="{{ book.image_url }}" width="200" height="300">#}
-{#    <h2>{{ book.title }}</h2>#}
-{#    <h3>{{ book.author }}</h3>#}
-{#    {% if book.is_taken %}#}
-{#        <h5> This book is taken</h5>#}
-{#    {% else %}#}
-{#        <h5> This book is not taken</h5>#}
-{#    {% endif %}#}
-{#    {% if error_message %}#}
-{#        <p><strong> {{ error_message }}</strong></p>#}
-{#    {% endif %}#}
-{#{% endblock %}#}
-
-
-
 {% block body %}
     <div class="container-fluid songs-container">
 
@@ -53,14 +36,21 @@
                             <p><strong>{{ error_message }}</strong></p>
                         {% endif %}
 
-                        <p> This book is {% if book.is_taken %}
-                            <span class="text-danger"> <strong>already taken.</strong> </span> {% else %}
-                            <span class="text-success"> <strong>available.</strong></span> {% endif %}</p>
+                        <p> This book is taken by
+                            {% if book.taken_by %}
+                                <span class="text-danger"> <strong>{{ book.taken_by }}.</strong> </span>
+                            {% else %}
+                                <span class="text-success"> <strong>no one.</strong></span>
+                            {% endif %}
+                        </p>
 
-
-                        <a href="#" class="btn btn-success">Borrow</a>
-
-
+                        {% if book.taken_by %}
+                            {% if book.taken_by == user.username %}
+                                <a href="#" class="btn btn-danger"> Return Book </a>
+                            {% endif %}
+                        {% else %}
+                            <a href="#" class="btn btn-success">Borrow</a>
+                        {% endif %}
                     </div>
                 </div>
 

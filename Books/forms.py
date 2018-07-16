@@ -6,9 +6,11 @@ from Books.models import Book
 
 class BookForm(forms.ModelForm):
 
+    taken_by = forms.CharField(required=False)
+
     class Meta:
         model = Book
-        fields = ['title', 'author', 'book_logo', 'is_taken']
+        fields = ['title', 'author', 'book_logo']
 
 
 class UserForm(forms.ModelForm):
